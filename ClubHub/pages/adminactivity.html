@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <form>
+        <label>Activiy Name:</label> <br>
+        <input type="text" id="title"> <br>
+        <label>Date:</label> <br>
+        <input type="date" id="eventDate"> <br>
+        <label>Description:</label> <br>
+        <input type="text" id="eventDes">
+
+        <button id="activity">Add Activity</button>
+    </form>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
+        import {
+          getAuth,
+          createUserWithEmailAndPassword,
+        } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+        import {
+          getDatabase,
+          ref,
+          set,
+          push,
+        } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-database.js";
+  
+        const firebaseConfig = {
+          apiKey: "AIzaSyCTb9qT03-p8ubCGaoY_39Q_eXPfUtZw7I",
+          authDomain: "auth-5fe06.firebaseapp.com",
+          databaseURL: "https://auth-5fe06-default-rtdb.firebaseio.com/",
+          projectId: "auth-5fe06",
+          storageBucket: "auth-5fe06.appspot.com",
+          messagingSenderId: "763971980961",
+          appId: "1:763971980961:web:ecfe41bb8a42e19f4faae0",
+          measurementId: "G-NLHV35XYD6",
+        };
+  
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+  
+        var auth = getAuth();
+  
+        document.getElementById("activity").addEventListener("click", (e) => {
+          e.preventDefault();
+          var Activity_Name = document.getElementById("title").value;
+          var date = document.getElementById("eventDate").value;
+          var des = document.getElementById("eventDes").value;
+        
+  
+          
+  
+          //storing data into database
+          push(ref(database, "Activity/" + Activity_Name), {
+            ActivityName: Activity_Name,
+            Activity_Date: date,
+            Activity_Description: des,
+          })
+            .then(() => {
+              alert("Activity Added!");
+            //   window.location.href = "home.html";
+            })
+            .catch((error) => {
+              alert(error);
+            });
+        });
+  
+      </script>
+</body>
+</html>

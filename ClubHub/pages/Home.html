@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ClubHub</title>
+    <link rel="stylesheet" href="/style/Home.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="logo"></div>
+      <a href="Home.html"></a>
+      <div>
+        <a href="/Pages/idnex.html" class="lnk">Calendar</a>
+        <a href="/Pages/ITS.html" class="lnk">ITS</a>
+        <a href="/Pages/About_Us.html" class="lnk">About Us</a>
+        <a href="/Pages/profile.html" class="lnk">
+          <img alt="hmm" src="/assets/profile.png" width="30px" height="auto"
+        /></a>
+        <a href="Help.html" class="lnk"
+          ><img
+            src="/assets/help2.png"
+            width="30px"
+            height="auto"
+            style="margin-left: 40px"
+        /></a>
+      </div>
+    </div>
+
+    <div class="acmback">
+      <img
+        src="/assets/acm.jpg"
+        style="width: 100%; height: auto; margin-left: -4px"
+      />
+    </div>
+
+    <div class="announce">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="/assets/s1.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="/assets/s2.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="/assets/s3.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="/assets/s4.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="/assets/s5.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="/assets/s6.jpg" style="width: 100%" />
+        </div>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="post1">
+        <h2>Thanking ACM chair-Person</h2>
+        <br />
+        <p>
+          RUB ACM Student Chapter would like to express our deepest appreciation
+          to the former office bearers, Chair person Ms. Kuenzang Choden, Vice
+          Chair Ms. Eusang Lhaki Dorji and Treasurer Mr. Deewas Chamling for
+          successfully completing their tenure as the office bearer of RUB ACM
+          Student Chapter. They took great effort and enthusiasm in actively
+          running this Chapter.
+        </p>
+        <p>
+          Your sincerity and dedication will always be remembered. <br />
+          We wish you All The Best in your future endeavours.
+        </p>
+        <br />
+        <div class="Kuenzang">
+          <p><img src="/assets/kuenzang.jpg" width="650px" height="auto" /></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Footer" style="margin-top: 70px">
+      <div class="FirstPart">
+        <img src="/assets/ACM.png" />
+      </div>
+
+      <div class="SecondPart">
+        Address<br /><br />
+        College of Science and technology<br />
+        Rinchending, Phuentsholing,<br />
+        Chukkha: Bhutan,<br />
+        Post-Box No: 450<br />
+        Postal Code: 21101<br />
+      </div>
+
+      <div class="ThirdPart">
+        <a href=""><img src="/assets/fb_logo.png" width="25" height="auto" /></a
+        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href=""
+          ><img
+            src="/assets/Instagram_icon.png"
+            width="25px"
+            height="auto" /></a
+        >&nbsp&nbsp&nbsp&nbsp
+        <a href=""
+          ><img src="/assets/Logo-WhatsApp.png" width="40px" height="auto" /></a
+        ><br /><br /><br />
+        Contact: +97517755293<br />
+        Email: info.cst@rub.edu.bt
+      </div>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

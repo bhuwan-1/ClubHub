@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Profile Page</title>
+
+    <meta name="author" content="Codeconvey" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="/style/profile.css" />
+
+    <link rel="stylesheet" href="/style/profile_Demo.css" />
+    <link rel="stylesheet" href="/style/register.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <a href="Home.html">
+          <img src="/assets/cst_logo.jfif" class="logo" />
+        </a>
+      </div>
+      <div>
+        <a href="/Pages/profile.html" class="lnk">
+          <img
+            name="profile"
+            src="/assets/profile.png"
+            width="30px"
+            height="auto"
+        /></a>
+        <a href="/Pages/idnex.html" class="lnk">Calendar</a>
+        <a href="/Pages/ITS.html" class="lnk">ITS</a>
+        <a href="/Pages/About_Us.html" class="lnk">About Us</a>
+        <a href="Help.html" class="lnk"
+          ><img
+            src="/assets/help2.png"
+            width="30px"
+            height="auto"
+            style="margin-left: 40px"
+        /></a>
+      </div>
+    </div>
+    <!-- <div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+ 
+           
+            
+        </div>
+       
+    </div>
+</div> -->
+    <div class="blue">
+      <header class="ScriptHeader">
+        <div class="rt-container">
+          <div class="col-rt-12">
+            <div class="rt-heading">
+              <h1>Student Profile</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="rt-container">
+          <div class="col-rt-12">
+            <div class="Scriptcontent">
+              <!-- Student Profile -->
+              <div class="student-profile py-4">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="card shadow-sm">
+                        <div class="card-header bg-transparent text-center">
+                          <img
+                            class="profile_img"
+                            src="/assets/profileIcon.png"
+                            alt="student dp"
+                          />
+                          <h3 id="displayName"></h3>
+                          <button id="logout">Log out</button>
+                        </div>
+                        <!-- <div class="card-body">
+            <p class="mb-0"><strong class="pr-1">Student ID:</strong>02190139</p>
+            <p class="mb-0"><strong class="pr-1">Department:</strong>IT</p>
+            <p class="mb-0"><strong class="pr-1">Year:</strong>3</p>
+          </div> -->
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="card shadow-sm">
+                        <div class="card-header bg-transparent border-0">
+                          <h3 class="mb-0">
+                            <i class="far fa-clone pr-1"></i>General Information
+                          </h3>
+                        </div>
+                        <br>
+                        <div class="card-body pt-0">
+                          <table class="table table-bordered">
+                            <tr>
+                              <th width="30%">Email</th>
+                              <td width="2%">:</td>
+                              <td id="displayEmail"></td>
+                            </tr>
+                            <tr>
+                              <th width="30%">D.O.B</th>
+                              <td width="2%">:</td>
+                              <td id="displayDob"></td>
+                            </tr>
+                            <tr>
+                              <th width="30%">Phone</th>
+                              <td width="2%">:</td>
+                              <td id="displayPhone"></td>
+                            </tr>
+                            <tr>
+                              <th width="30%">Student ID</th>
+                              <td width="2%">:</td>
+                              <td id="displayID"></td>
+                            </tr>
+                            <!-- <tr>
+                              <th width="30%">Blood</th>
+                              <td width="2%">:</td>
+                              <td>B+</td>
+                            </tr> -->
+                          </table>
+                        </div>
+                      </div>
+                      <div style="height: 26px"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="Footer">
+      <div class="FirstPart">
+        <img src="/assets/ACM.png" />
+      </div>
+
+      <div class="SecondPart">
+        Address<br /><br />
+        College of Science and technology<br />
+        Rinchending, Phuentsholing,<br />
+        Chukkha: Bhutan,<br />
+        Post-Box No: 450<br />
+        Postal Code: 21101<br />
+      </div>
+
+      <div class="ThirdPart">
+        <a href=""><img src="/assets/fb_logo.png" width="25" height="auto" /></a
+        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href=""
+          ><img
+            src="/assets/Instagram_icon.png"
+            width="25px"
+            height="auto" /></a
+        >&nbsp&nbsp&nbsp&nbsp
+        <a href=""
+          ><img src="/assets/Logo-WhatsApp.png" width="40px" height="auto" /></a
+        ><br /><br /><br />
+        Contact: +97517755293<br />
+        Email: info.cst@rub.edu.bt
+      </div>
+    </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+      import {
+        getDatabase,
+        ref,
+        set,
+        push,
+        onValue,
+      } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCTb9qT03-p8ubCGaoY_39Q_eXPfUtZw7I",
+        authDomain: "auth-5fe06.firebaseapp.com",
+        databaseURL: "https://auth-5fe06-default-rtdb.firebaseio.com/",
+        projectId: "auth-5fe06",
+        storageBucket: "auth-5fe06.appspot.com",
+        messagingSenderId: "763971980961",
+        appId: "1:763971980961:web:ecfe41bb8a42e19f4faae0",
+        measurementId: "G-NLHV35XYD6",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+
+      var auth = getAuth();
+
+      //signout user
+      document.getElementById("logout").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        signOut(auth)
+          .then(() => {
+            window.location.href = "login.html";
+          })
+          .catch((error) => {
+            alert("Logout failed!");
+          });
+      });
+
+      // const user = auth.currentUser;
+      // if (user !== null) {
+      //   console.log(user);
+      //   // The user object has basic properties such as display name, email, etc.
+
+      //   document.getElementById("displayName").value = user.studentID;
+      //   console.log("is this getting executed?");
+
+      //   // const displayName = user.displayName;
+      //   // const email = user.email;
+      //   // const photoURL = user.photoURL;
+      //   // const emailVerified = user.emailVerified;
+
+      //   // The user's ID, unique to the Firebase project. Do NOT use
+      //   // this value to authenticate with your backend server, if
+      //   // you have one. Use User.getToken() instead.
+      //   const uid = user.uid;
+      // } else {
+      //   console.log("out", user);
+      // }
+
+      const email = localStorage.getItem("email");
+      console.log(email);
+
+      const starCountRef = ref(database, "Users/");
+      onValue(starCountRef, (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        Object.values(data).map((id) => {
+          if (email == id.email) {
+            document.getElementById("displayName").innerHTML = id.fullName;
+            document.getElementById("displayEmail").innerHTML = id.email;
+            document.getElementById("displayDob").innerHTML = id.DateOfBirth;
+            document.getElementById("displayPhone").innerHTML = id.Phone;
+            document.getElementById("displayID").innerHTML = id.studentID;
+
+            console.log(id.email);
+            console.log(id.fullName);
+            console.log(id.studentID);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

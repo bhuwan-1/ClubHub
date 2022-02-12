@@ -1,0 +1,23 @@
+.cp{
+    border-radius: 20px;
+}
+#st
+{
+    border-radius: 20px;
+    padding: 5px;
+    background-position: center;
+}
+#dev
+{
+    
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.whole_blue{
+    color: white;
+    height: 195vh;
+    width: 100%;
+    padding-top: 40px;
+    background-color: #0075aa;
+}

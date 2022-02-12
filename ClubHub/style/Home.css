@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+.announce
+{
+    margin-left: 20%;
+    padding-right: 20%;
+}
+.acmImg img {
+    width: 650px;
+    height: auto;
+}
+div.post1   {
+    margin-top: 10px;
+    width: fit-content;
+}
+.Footer{
+    background-color: rgb(14, 13, 13);
+    color: white;
+    padding:20px 20px;
+    size:0.1px;
+    height: 205px;
+    width: 100%;
+
+}
+.FirstPart img{
+    padding-top: 20px;
+    margin-bottom: -10px;
+    width: 300px;
+    height: auto;
+}
+
+.SecondPart{
+	margin-left:500px;
+    margin-top: -130px;
+    padding: 30px;
+}
+
+.ThirdPart{
+	margin-left:970px;
+    margin-top: -130px;
+}
+.main {
+    /* margin-top: 10px; */
+    height: 60px;
+    width: 100%;
+    /* background-color: aqua;  */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 1px gainsboro;
+    padding: 10px;
+	font-family: 'poppins', sans-serif;
+    /* border-bottom: 10px gainsboro; */
+  }
+  
+  .logo {
+    height: 60px;
+    width: 200px;
+    background-image: url("/assets/cst_logo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+  }
+  
+  .lnk {
+    color: #0075aa;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bolder;
+  }
+  
+  .lnk:hover {
+    color: #2137fc;
+  }
+  
